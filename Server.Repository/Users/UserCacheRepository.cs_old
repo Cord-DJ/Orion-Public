@@ -1,0 +1,19 @@
+using Cord.Server.Domain.Users;
+using Microsoft.Extensions.Caching.Distributed;
+
+namespace Cord.Server.Repository.Users;
+
+public sealed class UserCacheRepository : CacheRepository<UserModel>, IUserRepository {
+    new IUserRepository Next => (base.Next as IUserRepository)!;
+
+    public UserCacheRepository(IUserRepository next, IDistributedCache cache) : base(next, cache) { }
+
+    public IAsyncEnumerable<UserModel> GetEveryone() => Next.GetEveryone();
+    public Task<UserModel?> GetByEmail(string email) => Next.GetByEmail(email);
+    public Task<UserModel?> GetByPassword(string password) => Next.GetByPassword(password);
+
+    public Task<bool> Exists(string email) => Next.Exists(email);
+    public Task<long> GetActiveUsersCount(TimeSpan duration) => Next.GetActiveUsersCount(duration);
+    public Task<long> TotalUsers() => Next.TotalUsers();
+    public Task<long> TotalVerifiedUsers() => Next.TotalVerifiedUsers();
+}

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="Rikarin" />
+        <Using Include="Rikarin.Repository" />
+        <Using Include="MongoDB.Bson.Serialization" />
+        <Using Include="MongoDB.Driver" />
+        <Using Include="Microsoft.Extensions.DependencyInjection" />
+        <Using Include="System.Collections.Generic" />
+        <Using Include="Serilog" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Rikarin.Repository" Version="1.4.0" />
+        <PackageReference Include="MongoAsyncEnumerableAdapter" Version="0.2.0" />
+        <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
+
+        <ProjectReference Include="../Server.Domain/Cord.Server.Domain.csproj" />
+    </ItemGroup>
+</Project>

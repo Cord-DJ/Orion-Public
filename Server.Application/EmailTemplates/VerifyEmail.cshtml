@@ -1,0 +1,17 @@
+@{
+    // ReSharper disable once Razor.LayoutNotResolved
+    Layout = "EmailTemplates._Layout.cshtml";
+}
+
+<style>
+    .button {
+        margin-top: 24px;
+    }
+</style>
+
+<h3>Hey @Model?.Name,</h3>
+<p>Thanks for registering an account on Cord.DJ! Before we get started, we just need you to confirm your e-mail just to be sure it’s you. Click on a button bellow to verify your e-mail address.</p>
+
+<div class="button">
+    <a href="https://cord.dj/verify#token=@Model?.Token" target="_blank">Verify Email</a>
+</div>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<header>
+    <style>
+        body {
+            --text-muted: #75777A;
+            --primary-color: #0073a6;
+            --background-border: #e1e1e1;
+            
+            background-color: #F3F3F3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+        
+        .logo {
+            height: 40px;
+            margin: 12px 0 24px 0;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 540px;
+            background-color: white;
+            padding: 45px;
+            border-radius: 4px;
+            border: 1px var(--background-border) solid;
+        }
+        
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 24px;
+        }
+        
+        footer p {
+            font-size: 13px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        p {
+            margin: 6px 0;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+        
+        .button {
+            align-self: center;
+            width: fit-content;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .button a {
+            color: white;
+        }
+    </style>
+</header>
+<body>
+<img class="logo" src="https://cord.dj/assets/logo-full.png"/>
+<div class="content">
+    @RenderBody()
+</div>
+</body>
+<footer>
+    <p>
+        Sent by Cord.DJ
+        • <a href="https://blog.cord.dj/" target="_blank">Blog</a>
+        • <a href="https://twitter.com/CordDJ1" target="_blank">Twitter</a>
+        • <a href="https://github.com/cord-dj" target="_blank">GitHub</a>
+    </p>
+    <p>© Cord DJ, Inc 3790 El Camino Real, Palo Alto, CA 94306, USA</p>
+</footer>
+</html>

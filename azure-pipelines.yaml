@@ -1,0 +1,17 @@
+trigger:
+  batch: true
+
+resources:
+  repositories:
+    - repository: pipelines
+      type: git
+      name: Core/Pipelines
+
+extends:
+  template: pipeline-service.yaml@pipelines
+  parameters:
+    projects: Server
+    pack: Server.Contracts
+    dockerImage: cord/orion
+    kubeNamespace: cord
+    feed: rikarin

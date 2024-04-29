@@ -1,0 +1,38 @@
+logging:
+  elastic:
+    uri: "https://elasticsearch.internal.rikarin.org"
+  Serilog:
+    MinimumLevel: "Information"
+
+kestrel:
+  endpoints:
+    - url: http://0.0.0.0:4295
+      protocols: Http1
+    - url: http://0.0.0.0:5295
+      protocols: Http2
+
+cdn:
+  endpoint: http://localhost:4296
+  authToken: "token"
+
+redis:
+  hostname: localhost:6379
+
+mongodb:
+  hostname: mongodb://admin:admin@10.1.0.3:32000/cord?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
+  collection: cord
+
+sendgrid:
+  apiKey: key
+
+email:
+  sender: noreply@cord.dj
+  name: Cord DJ
+
+cors:
+  origins:
+    - https://beta.cord.dj
+
+oauth:
+  issuer: https://beta.cord.dj/api/auth
+  

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <PackageId>Rikarin</PackageId>
+        <Authors>Rene Cincura</Authors>
+        <Company>Cord.DJ</Company>
+        <RootNamespace>Rikarin</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="IdGen" Version="3.0.2"/>
+    </ItemGroup>
+</Project>

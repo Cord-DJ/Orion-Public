@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="Rikarin"/>
+        <Using Include="Rikarin.Core"/>
+        <Using Include="Microsoft.Extensions.DependencyInjection"/>
+        <Using Include="System.Collections.Generic"/>
+        <Using Include="Serilog"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../API/Cord.csproj"/>
+        <PackageReference Include="Rikarin" Version="1.2.0"/>
+
+        <PackageReference Include="Rikarin.Core" Version="1.4.0"/>
+        <PackageReference Include="Serilog.AspNetCore" Version="6.1.0"/>
+        <PackageReference Include="App.Metrics.AspNetCore" Version="4.3.0"/>
+        <PackageReference Include="System.Linq.Async" Version="6.0.1"/>
+        <PackageReference Include="FluentValidation" Version="11.4.0"/>
+    </ItemGroup>
+</Project>

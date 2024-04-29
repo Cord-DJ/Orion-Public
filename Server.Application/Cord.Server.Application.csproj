@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="Rikarin" />
+        <Using Include="Rikarin.Core" />
+        <Using Include="Microsoft.Extensions.DependencyInjection" />
+        <Using Include="System.Collections.Generic" />
+        <Using Include="Serilog" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AngleSharp" Version="1.0.4" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+        <PackageReference Include="FluentEmail.Razor" Version="3.0.2" />
+        <PackageReference Include="FluentEmail.SendGrid" Version="3.0.2" />
+        <PackageReference Include="HtmlSanitizer" Version="8.0.692" />
+        <PackageReference Include="IdentityServer4" Version="4.1.2" />
+        <PackageReference Include="YoutubeExplode" Version="6.3.1" />
+
+        <ProjectReference Include="../Server.Domain/Cord.Server.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="EmailTemplates/**" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+service AuthService {
+  rpc Login (LoginRequest) returns (LoginReply);
+  rpc LoginBot (LoginBotRequest) returns (LoginReply);
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginBotRequest {
+  string token = 1;
+}
+
+message LoginReply {
+  ErrorCode errorCode = 1;
+  uint64 Id = 2;
+}
+
+
+enum ErrorCode {
+  None = 0;
+  BadRequest = 400;
+  NotFound = 404;
+}

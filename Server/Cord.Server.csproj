@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>Cord.Server</RootNamespace>
+        <PreserveCompilationContext>true</PreserveCompilationContext>
+
+        <PublishReadyToRun>false</PublishReadyToRun> <!-- AOT -->
+        <SelfContained>false</SelfContained>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="Rikarin" />
+        <Using Include="Rikarin.Core" />
+        <Using Include="Serilog" />
+        <Using Include="System.Collections.Generic" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Rikarin.Runner" Version="1.4.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.StackExchangeRedis" Version="7.0.2" />
+        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.2" />
+        <PackageReference Include="StackExchange.Redis" Version="2.6.90" />
+        <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+
+        <ProjectReference Include="../Server.Domain/Cord.Server.Domain.csproj" />
+        <ProjectReference Include="../Server.Contracts/Cord.Server.Contracts.csproj" />
+        <ProjectReference Include="../Server.Repository/Cord.Server.Repository.csproj" />
+        <ProjectReference Include="../Server.Application/Cord.Server.Application.csproj" />
+    </ItemGroup>
+</Project>
